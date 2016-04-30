@@ -1,0 +1,35 @@
+create database attendance_system2;
+
+use attendance_system2;
+
+
+create table Students(
+roll int NOT NULL,
+name varchar(20) NOT NULL,
+FOREIGN KEY (roll) REFERENCES Attendance(roll));
+
+
+create table attendance(
+roll int primary key );
+
+create table class(
+sno int primary key auto_increment,
+cdate varchar(7) UNIQUE);
+
+alter table class  auto_increment=1;
+
+Update  attendance SET _140815='1' where roll='1';
+
+
+
+delete from class where cdate='_180815';
+
+ALTER TABLE Attendance drop COLUMN _180815 ;
+
+delete from attendance;
+
+select * from attendance;
+
+select * from Students;
+
+alter table attendance  auto_increment=1;
